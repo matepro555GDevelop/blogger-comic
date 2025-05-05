@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Comic Maker Avanzado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="toolbar">
+    <button onclick="addPanel()">Agregar Viñeta</button>
+    <button onclick="removePanel()">Borrar Viñeta</button>
+    <input type="file" id="imageUpload" accept="image/*" onchange="addImage(event)">
+    <input type="text" id="captionInput" placeholder="Texto">
+    <input type="color" id="textColor" value="#000000">
+    <input type="number" id="textSize" value="16" min="8" max="48">
+    <button onclick="addCaption()">Agregar Texto</button>
+    <button onclick="downloadPDF()">Guardar como PDF</button>
+  </div>
+  <div id="comicArea" class="comic-area"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
